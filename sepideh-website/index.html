@@ -207,6 +207,16 @@
     letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
     border: 1px solid var(--border); border-radius: 100px; padding: 2px 10px;
   }
+  .menu-cat.collapsed .menu-row:nth-child(n+9) { display: none; }
+  .menu-cat.collapsed .menu-row:nth-child(8) { border-bottom: none; }
+  .menu-more {
+    display: block; margin: 32px auto 0;
+    background: transparent; border: 1px solid var(--border-soft); border-radius: 100px;
+    color: var(--text-primary); font-family: var(--font-body); font-weight: 600; font-size: 14px;
+    padding: 12px 28px; cursor: pointer;
+    transition: color 200ms ease, border-color 200ms ease;
+  }
+  .menu-more:hover { color: var(--accent); border-color: var(--accent); }
   .menu-note { text-align: center; margin-top: 48px; color: var(--text-muted); font-size: 14px; max-width: 62ch; margin-inline: auto; }
 
   /* Reviews */
@@ -385,8 +395,8 @@
     <div class="container pillars-grid">
       <div class="pillars-intro reveal">
         <span class="eyebrow">Was uns ausmacht</span>
-        <h2>Vier Gründe, heute zu kommen</h2>
-        <p>Keine Abkürzungen, keine Show — nur das, was persische Küche seit Generationen gut macht.</p>
+        <h2>Drei Gründe, heute zu kommen</h2>
+        <p>Keine Abkürzungen, keine Show — nur das, was persische Küche seit Generationen gut macht. Serviert in gemütlichen Räumen mit Platz für Familien und Gruppen.</p>
       </div>
       <div class="pillar-list">
         <div class="pillar reveal">
@@ -408,13 +418,6 @@
           <div class="pillar-body">
             <h3>Herzlicher Service</h3>
             <p>Aufmerksam und familiär — wir beraten gern, wenn persische Küche neu für dich ist.</p>
-          </div>
-        </div>
-        <div class="pillar reveal">
-          <span class="pillar-num" aria-hidden="true">04</span>
-          <div class="pillar-body">
-            <h3>Gemütliches Ambiente</h3>
-            <p>Großzügige Räume, Außenterrasse und Platz für Familien und Gruppen.</p>
           </div>
         </div>
       </div>
@@ -642,6 +645,25 @@
       const panel = document.getElementById('cat-' + tab.dataset.cat);
       panel.classList.add('active'); panel.hidden = false;
     });
+  });
+
+  const VISIBLE_ROWS = 8;
+  document.querySelectorAll('.menu-cat').forEach(cat => {
+    const rows = cat.querySelectorAll('.menu-row');
+    if (rows.length <= VISIBLE_ROWS) return;
+    cat.classList.add('collapsed');
+    const btn = document.createElement('button');
+    btn.className = 'menu-more';
+    btn.setAttribute('aria-expanded', 'false');
+    const moreLabel = `Mehr anzeigen (${rows.length - VISIBLE_ROWS} weitere)`;
+    btn.textContent = moreLabel;
+    btn.addEventListener('click', () => {
+      const collapsed = cat.classList.toggle('collapsed');
+      btn.setAttribute('aria-expanded', String(!collapsed));
+      btn.textContent = collapsed ? moreLabel : 'Weniger anzeigen';
+      if (collapsed) document.getElementById('menu').scrollIntoView({ behavior: 'smooth' });
+    });
+    cat.appendChild(btn);
   });
 
   const prefersReduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
