@@ -225,6 +225,24 @@
   .rating-line { text-align: center; margin-top: 40px; color: var(--text-muted); }
   .rating-line strong { color: var(--text-primary); }
 
+  /* Instagram */
+  .ig-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .ig-item {
+    position: relative; aspect-ratio: 1; overflow: hidden;
+    border-radius: var(--radius); border: 1px solid var(--border-soft); display: block;
+  }
+  .ig-item img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 400ms ease, opacity 300ms ease;
+  }
+  .ig-item:hover img { transform: scale(1.05); opacity: .75; }
+  .ig-item .ig-overlay {
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    color: #fff; opacity: 0; transition: opacity 300ms ease; background: rgba(0,0,0,.35);
+  }
+  .ig-item:hover .ig-overlay { opacity: 1; }
+  .ig-actions { display: flex; justify-content: center; margin-top: 40px; }
+
   /* Kontakt */
   .visit-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-block: 1px solid var(--border-soft); }
   .visit-card { padding: 40px 36px; border-left: 1px solid var(--border-soft); scroll-margin-top: 120px; }
@@ -269,6 +287,7 @@
     .pillars-intro { position: static; }
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
     .reviews-grid, .visit-grid { grid-template-columns: 1fr; }
+    .ig-grid { grid-template-columns: repeat(2, 1fr); }
     .visit-card { border-left: none; border-top: 1px solid var(--border-soft); padding: 32px 0; }
     .visit-card:first-child { border-top: none; padding-top: 8px; }
   }
@@ -544,6 +563,40 @@
         </article>
       </div>
       <p class="rating-line reveal"><strong>4,5 / 5</strong> bei über 2.000 Bewertungen</p>
+    </div>
+  </section>
+
+  <!-- Instagram -->
+  <section id="instagram">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Instagram</span>
+        <h2>@sepideh_hamburg</h2>
+      </div>
+      <div class="ig-grid">
+        <a class="ig-item reveal" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Beitrag auf Instagram ansehen">
+          <img src="images/ig-1.jpg" alt="Kabab mit Safranreis und Beilagen" loading="lazy">
+          <span class="ig-overlay" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+        <a class="ig-item reveal" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Beitrag auf Instagram ansehen">
+          <img src="images/ig-2.jpg" alt="Suppe mit frischen Kräutern und Brotkorb" loading="lazy">
+          <span class="ig-overlay" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+        <a class="ig-item reveal" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Beitrag auf Instagram ansehen">
+          <img src="images/ig-3.jpg" alt="Ankündigung der Wiedereröffnung des Restaurants" loading="lazy">
+          <span class="ig-overlay" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+        <a class="ig-item reveal" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Beitrag auf Instagram ansehen">
+          <img src="images/ig-4.jpg" alt="Eid Mubarak Grußkarte des Restaurants" loading="lazy">
+          <span class="ig-overlay" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+      </div>
+      <div class="ig-actions reveal">
+        <a class="btn-solid" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+          Mehr auf Instagram anzeigen
+        </a>
+      </div>
     </div>
   </section>
 
