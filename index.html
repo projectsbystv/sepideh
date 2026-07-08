@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sepideh | Persisches Restaurant in Hamburg</title>
 <meta name="description" content="Sepideh ist ein familiengeführtes persisches Restaurant in Hamburg-Wandsbek. Kebabs vom Holzkohlegrill, Safranreis und iranische Gastfreundschaft. Täglich 12 bis 23 Uhr.">
+<link rel="icon" type="image/jpeg" href="images/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Sora:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -53,8 +54,9 @@
   }
   .brand-mark {
     width: 40px; height: 40px; border: 1px solid var(--accent); border-radius: 100px;
-    display: flex; align-items: center; justify-content: center; color: var(--accent);
+    display: flex; align-items: center; justify-content: center; overflow: hidden;
   }
+  .brand-mark img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .nav-links { display: flex; gap: 4px; list-style: none; align-items: center; }
   .nav-links a {
     text-decoration: none; color: var(--text-primary); font-weight: 500; font-size: 16px;
@@ -305,7 +307,7 @@
   <div class="container nav-inner">
     <a class="brand" href="#top" aria-label="Sepideh Startseite">
       <span class="brand-mark" aria-hidden="true">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2 L22 12 L12 22 L2 12 Z"/><circle cx="12" cy="12" r="4"/></svg>
+        <img src="images/logo.jpg" alt="">
       </span>
       Sepideh
     </a>
@@ -316,7 +318,7 @@
       <li><a href="#kontakt">Kontakt</a></li>
     </ul>
     <div class="nav-right">
-      <a class="nav-social" href="https://www.instagram.com/restaurant_sepideh/" target="_blank" rel="noopener" aria-label="Sepideh auf Instagram">
+      <a class="nav-social" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Sepideh auf Instagram">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
       </a>
       <a class="btn-outline" href="tel:+494042900376">
@@ -350,14 +352,14 @@
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
       <div class="dish-tile"><img src="images/joojeh.jpg" alt="" loading="lazy"><span>Djudjeh-Kebab</span></div>
-      <div class="dish-tile"><img src="images/khoresch.jpg" alt="" loading="lazy"><span>Khoresch-Schmorgerichte</span></div>
-      <div class="dish-tile"><img src="images/mezze.jpg" alt="" loading="lazy"><span>Vorspeisen</span></div>
+      <div class="dish-tile"><img src="images/kabab.jpg" alt="" loading="lazy"><span>Kabab vom Grill</span></div>
+      <div class="dish-tile"><img src="images/suppe.jpg" alt="" loading="lazy"><span>Warme Vorspeisen</span></div>
       <div class="dish-tile"><img src="images/kufteh.jpg" alt="" loading="lazy"><span>Frische Salate</span></div>
       <div class="dish-tile"><img src="images/dessert.jpg" alt="" loading="lazy"><span>Süße Desserts</span></div>
       <div class="dish-tile"><img src="images/tee.jpg" alt="" loading="lazy"><span>Persischer Tee</span></div>
       <div class="dish-tile"><img src="images/joojeh.jpg" alt="" loading="lazy"><span>Djudjeh-Kebab</span></div>
-      <div class="dish-tile"><img src="images/khoresch.jpg" alt="" loading="lazy"><span>Khoresch-Schmorgerichte</span></div>
-      <div class="dish-tile"><img src="images/mezze.jpg" alt="" loading="lazy"><span>Vorspeisen</span></div>
+      <div class="dish-tile"><img src="images/kabab.jpg" alt="" loading="lazy"><span>Kabab vom Grill</span></div>
+      <div class="dish-tile"><img src="images/suppe.jpg" alt="" loading="lazy"><span>Warme Vorspeisen</span></div>
       <div class="dish-tile"><img src="images/kufteh.jpg" alt="" loading="lazy"><span>Frische Salate</span></div>
       <div class="dish-tile"><img src="images/dessert.jpg" alt="" loading="lazy"><span>Süße Desserts</span></div>
       <div class="dish-tile"><img src="images/tee.jpg" alt="" loading="lazy"><span>Persischer Tee</span></div>
@@ -595,7 +597,7 @@
       <p>Täglich 12:00 – 23:00 Uhr</p>
     </div>
     <div class="footer-legal">
-      <a href="https://www.instagram.com/restaurant_sepideh/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener">Instagram</a>
       <a href="#">Impressum</a>
       <a href="#">Datenschutz</a>
     </div>
