@@ -127,21 +127,12 @@
   .dish-tile {
     width: 280px; height: 180px; border-radius: var(--radius); flex-shrink: 0;
     border: 1px solid var(--border); position: relative; overflow: hidden;
-    display: flex; align-items: flex-end; padding: 16px;
   }
   .dish-tile img {
     position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
     transition: transform 400ms ease;
   }
   .dish-tile:hover img { transform: scale(1.06); }
-  .dish-tile::after {
-    content: ""; position: absolute; inset: 0;
-    background: linear-gradient(180deg, transparent 45%, rgba(0,0,0,.75));
-  }
-  .dish-tile span {
-    position: relative; z-index: 2; font-family: var(--font-heading); font-weight: 600; font-size: 16px;
-    text-shadow: 0 1px 8px rgba(0,0,0,.8);
-  }
 
   /* ---------- Sections ---------- */
   section { padding: 96px 0; }
@@ -351,18 +342,18 @@
   <!-- Marquee gallery -->
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
-      <div class="dish-tile"><img src="images/joojeh.jpg" alt="" loading="lazy"><span>Djudjeh-Kebab</span></div>
-      <div class="dish-tile"><img src="images/kabab.jpg" alt="" loading="lazy"><span>Kabab vom Grill</span></div>
-      <div class="dish-tile"><img src="images/suppe.jpg" alt="" loading="lazy"><span>Warme Vorspeisen</span></div>
-      <div class="dish-tile"><img src="images/kufteh.jpg" alt="" loading="lazy"><span>Frische Salate</span></div>
-      <div class="dish-tile"><img src="images/dessert.jpg" alt="" loading="lazy"><span>Süße Desserts</span></div>
-      <div class="dish-tile"><img src="images/tee.jpg" alt="" loading="lazy"><span>Persischer Tee</span></div>
-      <div class="dish-tile"><img src="images/joojeh.jpg" alt="" loading="lazy"><span>Djudjeh-Kebab</span></div>
-      <div class="dish-tile"><img src="images/kabab.jpg" alt="" loading="lazy"><span>Kabab vom Grill</span></div>
-      <div class="dish-tile"><img src="images/suppe.jpg" alt="" loading="lazy"><span>Warme Vorspeisen</span></div>
-      <div class="dish-tile"><img src="images/kufteh.jpg" alt="" loading="lazy"><span>Frische Salate</span></div>
-      <div class="dish-tile"><img src="images/dessert.jpg" alt="" loading="lazy"><span>Süße Desserts</span></div>
-      <div class="dish-tile"><img src="images/tee.jpg" alt="" loading="lazy"><span>Persischer Tee</span></div>
+      <div class="dish-tile"><img src="images/joojeh.jpg" alt="" loading="lazy"></div>
+      <div class="dish-tile"><img src="images/kabab.jpg" alt="" loading="lazy"></div>
+      <div class="dish-tile"><img src="images/suppe.jpg" alt="" loading="lazy"></div>
+      <div class="dish-tile"><img src="images/kufteh.jpg" alt="" loading="lazy"></div>
+      <div class="dish-tile"><img src="images/dessert.jpg" alt="" loading="lazy"></div>
+      <div class="dish-tile"><img src="images/tee.jpg" alt="" loading="lazy"></div>
+      <div class="dish-tile"><img src="images/joojeh.jpg" alt="" loading="lazy"></div>
+      <div class="dish-tile"><img src="images/kabab.jpg" alt="" loading="lazy"></div>
+      <div class="dish-tile"><img src="images/suppe.jpg" alt="" loading="lazy"></div>
+      <div class="dish-tile"><img src="images/kufteh.jpg" alt="" loading="lazy"></div>
+      <div class="dish-tile"><img src="images/dessert.jpg" alt="" loading="lazy"></div>
+      <div class="dish-tile"><img src="images/tee.jpg" alt="" loading="lazy"></div>
     </div>
   </div>
 
