@@ -234,7 +234,7 @@
 
   /* Kontakt */
   .visit-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-block: 1px solid var(--border-soft); }
-  .visit-card { padding: 40px 36px; border-left: 1px solid var(--border-soft); }
+  .visit-card { padding: 40px 36px; border-left: 1px solid var(--border-soft); scroll-margin-top: 120px; }
   .visit-card:first-child { border-left: none; padding-left: 0; }
   .visit-card h3 {
     display: flex; align-items: center; gap: 10px;
@@ -312,7 +312,7 @@
     <ul class="nav-links">
       <li><a href="#about">Über uns</a></li>
       <li><a href="#menu">Speisekarte</a></li>
-      <li><a href="#reviews">Gäste</a></li>
+      <li><a href="#oeffnungszeiten">Öffnungszeiten</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
     </ul>
     <div class="nav-right">
@@ -571,7 +571,7 @@
           <p>Hammer Str. 5<br>22041 Hamburg</p>
           <p><a href="https://maps.google.com/?q=Sepideh+Restaurant+Hammer+Str.+5+22041+Hamburg" target="_blank" rel="noopener">In Google Maps öffnen</a></p>
         </div>
-        <div class="visit-card reveal">
+        <div class="visit-card reveal" id="oeffnungszeiten">
           <h3><span class="visit-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg></span>Öffnungszeiten</h3>
           <p>Montag – Sonntag<br><strong style="color:var(--text-primary)">12:00 – 23:00 Uhr</strong></p>
           <p>Täglich für euch geöffnet</p>
