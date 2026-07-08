@@ -164,20 +164,24 @@
 
   /* Pillars */
   .pillars { background: var(--surface); border-block: 1px solid var(--border-soft); }
-  .pillars-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .pillars-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 72px; align-items: start; }
+  .pillars-intro { position: sticky; top: 128px; }
+  .pillars-intro h2 { margin-bottom: 20px; text-wrap: balance; }
+  .pillars-intro p { color: var(--text-muted); max-width: 40ch; }
   .pillar {
-    background: var(--background); border: 1px solid var(--border-soft); border-radius: var(--radius);
-    padding: 32px 24px; text-align: center;
-    transition: border-color 250ms ease, transform 250ms ease;
+    display: grid; grid-template-columns: 76px 1fr; gap: 8px 20px;
+    padding: 30px 0 34px; border-top: 1px solid var(--border-soft);
   }
-  .pillar:hover { border-color: var(--accent); transform: translateY(-4px); }
-  .pillar-icon {
-    width: 56px; height: 56px; margin: 0 auto 16px; border-radius: 100px;
-    border: 1px solid var(--border); color: var(--accent);
-    display: flex; align-items: center; justify-content: center;
+  .pillar:last-child { border-bottom: 1px solid var(--border-soft); }
+  .pillar-num {
+    font-family: var(--font-display); font-style: italic; font-size: 34px; line-height: 1.1;
+    color: var(--accent); opacity: .45; transition: opacity 250ms ease;
   }
-  .pillar h3 { font-family: var(--font-heading); font-size: 18px; font-weight: 600; margin-bottom: 8px; }
-  .pillar p { color: var(--text-muted); font-size: 15px; }
+  .pillar:hover .pillar-num { opacity: 1; }
+  .pillar-body { transition: transform 250ms ease; }
+  .pillar:hover .pillar-body { transform: translateX(6px); }
+  .pillar h3 { font-family: var(--font-heading); font-size: 19px; font-weight: 600; margin-bottom: 6px; }
+  .pillar p { color: var(--text-muted); font-size: 15px; max-width: 48ch; }
 
   /* Menu */
   .menu-tabs { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 48px; }
@@ -219,21 +223,18 @@
   .rating-line strong { color: var(--text-primary); }
 
   /* Kontakt */
-  .visit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .visit-card {
-    border: 1px solid var(--border-soft); border-radius: var(--radius); background: var(--surface);
-    padding: 32px 24px; text-align: center; transition: border-color 250ms ease;
+  .visit-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-block: 1px solid var(--border-soft); }
+  .visit-card { padding: 40px 36px; border-left: 1px solid var(--border-soft); }
+  .visit-card:first-child { border-left: none; padding-left: 0; }
+  .visit-card h3 {
+    display: flex; align-items: center; gap: 10px;
+    font-family: var(--font-heading); font-size: 18px; font-weight: 600; margin-bottom: 12px;
   }
-  .visit-card:hover { border-color: var(--accent); }
-  .visit-card h3 { font-family: var(--font-heading); font-size: 18px; font-weight: 600; margin: 16px 0 8px; }
-  .visit-card p { color: var(--text-muted); font-size: 15px; }
+  .visit-card p { color: var(--text-muted); font-size: 15px; margin-bottom: 8px; }
+  .visit-card p:last-child { margin-bottom: 0; }
   .visit-card a { font-weight: 700; text-decoration: none; }
   .visit-card a:hover { text-decoration: underline; }
-  .visit-icon {
-    width: 56px; height: 56px; margin: 0 auto; border-radius: 100px;
-    border: 1px solid var(--border); color: var(--accent);
-    display: flex; align-items: center; justify-content: center;
-  }
+  .visit-icon { color: var(--accent); display: inline-flex; flex-shrink: 0; }
   .service-tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 48px; }
   .service-tags span {
     border: 1px solid var(--border-soft); border-radius: 100px; padding: 6px 16px;
@@ -267,9 +268,12 @@
 
   /* Responsive */
   @media (max-width: 992px) {
-    .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+    .pillars-grid { grid-template-columns: 1fr; gap: 40px; }
+    .pillars-intro { position: static; }
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
     .reviews-grid, .visit-grid { grid-template-columns: 1fr; }
+    .visit-card { border-left: none; border-top: 1px solid var(--border-soft); padding: 32px 0; }
+    .visit-card:first-child { border-top: none; padding-top: 8px; }
   }
   @media (max-width: 860px) {
     .nav-links, .nav-right .btn-outline span.label { display: none; }
@@ -285,7 +289,8 @@
     }
     .nav.open .nav-links a { text-align: center; padding: 16px; }
     section { padding: 64px 0; }
-    .pillars-grid { grid-template-columns: 1fr; }
+    .pillar { grid-template-columns: 56px 1fr; }
+    .pillar-num { font-size: 28px; }
   }
 </style>
 </head>
@@ -377,39 +382,40 @@
 
   <!-- Pillars -->
   <section class="pillars">
-    <div class="container">
-      <div class="section-head reveal">
+    <div class="container pillars-grid">
+      <div class="pillars-intro reveal">
         <span class="eyebrow">Was uns ausmacht</span>
         <h2>Vier Gründe, heute zu kommen</h2>
+        <p>Keine Abkürzungen, keine Show — nur das, was persische Küche seit Generationen gut macht.</p>
       </div>
-      <div class="pillars-grid">
+      <div class="pillar-list">
         <div class="pillar reveal">
-          <div class="pillar-icon" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 2v4M12 2v4M16 2v4M5 10h14M6 6h12a1 1 0 0 1 1 1v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V7a1 1 0 0 1 1-1z"/></svg>
+          <span class="pillar-num" aria-hidden="true">01</span>
+          <div class="pillar-body">
+            <h3>Holzkohlegrill</h3>
+            <p>Jeder Spieß wird frisch über offener Flamme gegrillt — nie vorgekocht.</p>
           </div>
-          <h3>Holzkohlegrill</h3>
-          <p>Jeder Spieß wird frisch über offener Flamme gegrillt — nie vorgekocht.</p>
         </div>
         <div class="pillar reveal">
-          <div class="pillar-icon" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a9 9 0 0 1 9 9c0 4-3 7-6 8l-3 3-3-3c-3-1-6-4-6-8a9 9 0 0 1 9-9z"/><path d="M12 7v5l3 2"/></svg>
+          <span class="pillar-num" aria-hidden="true">02</span>
+          <div class="pillar-body">
+            <h3>Frische Zutaten</h3>
+            <p>Ausgewogene Gewürze, Safran und großzügige Portionen — jeden Tag frisch.</p>
           </div>
-          <h3>Frische Zutaten</h3>
-          <p>Ausgewogene Gewürze, Safran und großzügige Portionen — jeden Tag frisch.</p>
         </div>
         <div class="pillar reveal">
-          <div class="pillar-icon" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+          <span class="pillar-num" aria-hidden="true">03</span>
+          <div class="pillar-body">
+            <h3>Herzlicher Service</h3>
+            <p>Aufmerksam und familiär — wir beraten gern, wenn persische Küche neu für dich ist.</p>
           </div>
-          <h3>Herzlicher Service</h3>
-          <p>Aufmerksam und familiär — wir beraten gern, wenn persische Küche neu für dich ist.</p>
         </div>
         <div class="pillar reveal">
-          <div class="pillar-icon" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg>
+          <span class="pillar-num" aria-hidden="true">04</span>
+          <div class="pillar-body">
+            <h3>Gemütliches Ambiente</h3>
+            <p>Großzügige Räume, Außenterrasse und Platz für Familien und Gruppen.</p>
           </div>
-          <h3>Gemütliches Ambiente</h3>
-          <p>Großzügige Räume, Außenterrasse und Platz für Familien und Gruppen.</p>
         </div>
       </div>
     </div>
@@ -564,26 +570,17 @@
       </div>
       <div class="visit-grid">
         <div class="visit-card reveal">
-          <div class="visit-icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <h3>Adresse</h3>
+          <h3><span class="visit-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>Adresse</h3>
           <p>Hammer Str. 5<br>22041 Hamburg</p>
           <p><a href="https://maps.google.com/?q=Sepideh+Restaurant+Hammer+Str.+5+22041+Hamburg" target="_blank" rel="noopener">In Google Maps öffnen</a></p>
         </div>
         <div class="visit-card reveal">
-          <div class="visit-icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg>
-          </div>
-          <h3>Öffnungszeiten</h3>
+          <h3><span class="visit-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg></span>Öffnungszeiten</h3>
           <p>Montag – Sonntag<br><strong style="color:var(--text-primary)">12:00 – 23:00 Uhr</strong></p>
           <p>Täglich für euch geöffnet</p>
         </div>
         <div class="visit-card reveal">
-          <div class="visit-icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg>
-          </div>
-          <h3>Reservierung</h3>
+          <h3><span class="visit-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg></span>Reservierung</h3>
           <p><a href="tel:+494042900376">040 42900376</a></p>
           <p>Am Wochenende empfehlen wir, rechtzeitig zu reservieren.</p>
         </div>
