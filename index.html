@@ -226,7 +226,9 @@
   .rating-line strong { color: var(--text-primary); }
 
   /* Instagram */
+  #instagram .section-head { margin-bottom: 96px; }
   .ig-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .ig-item.ig-hidden { display: none; }
   .ig-item {
     position: relative; aspect-ratio: 1; overflow: hidden;
     border-radius: var(--radius); border: 1px solid var(--border-soft); display: block;
@@ -241,7 +243,7 @@
     color: #fff; opacity: 0; transition: opacity 300ms ease; background: rgba(0,0,0,.35);
   }
   .ig-item:hover .ig-overlay { opacity: 1; }
-  .ig-actions { display: flex; justify-content: center; margin-top: 40px; }
+  .ig-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 40px; }
 
   /* Kontakt */
   .visit-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-block: 1px solid var(--border-soft); }
@@ -361,18 +363,18 @@
   <!-- Marquee gallery -->
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
-      <div class="dish-tile"><img src="images/joojeh.jpg" alt="" loading="lazy"></div>
+      <div class="dish-tile"><img src="images/teller.jpg" alt="" loading="lazy"></div>
       <div class="dish-tile"><img src="images/kabab.jpg" alt="" loading="lazy"></div>
       <div class="dish-tile"><img src="images/suppe.jpg" alt="" loading="lazy"></div>
       <div class="dish-tile"><img src="images/kufteh.jpg" alt="" loading="lazy"></div>
-      <div class="dish-tile"><img src="images/dessert.jpg" alt="" loading="lazy"></div>
       <div class="dish-tile"><img src="images/tee.jpg" alt="" loading="lazy"></div>
-      <div class="dish-tile"><img src="images/joojeh.jpg" alt="" loading="lazy"></div>
+      <div class="dish-tile"><img src="images/oliven.jpg" alt="" loading="lazy"></div>
+      <div class="dish-tile"><img src="images/teller.jpg" alt="" loading="lazy"></div>
       <div class="dish-tile"><img src="images/kabab.jpg" alt="" loading="lazy"></div>
       <div class="dish-tile"><img src="images/suppe.jpg" alt="" loading="lazy"></div>
       <div class="dish-tile"><img src="images/kufteh.jpg" alt="" loading="lazy"></div>
-      <div class="dish-tile"><img src="images/dessert.jpg" alt="" loading="lazy"></div>
       <div class="dish-tile"><img src="images/tee.jpg" alt="" loading="lazy"></div>
+      <div class="dish-tile"><img src="images/oliven.jpg" alt="" loading="lazy"></div>
     </div>
   </div>
 
@@ -387,7 +389,7 @@
         <p>Unser großzügiges Restaurant ist ideal für Familien und Gruppen. Am Wochenende empfehlen wir eine Reservierung.</p>
       </div>
       <div class="about-art reveal">
-        <img src="images/teekanne.jpg" alt="Persische Teekanne mit Granatapfel und Pistazien auf einem Flechtteller" loading="lazy">
+        <img src="images/about.jpg" alt="Gastraum des Restaurants Sepideh mit persischer Kalligrafie an der Wand" loading="lazy">
       </div>
     </div>
   </section>
@@ -574,27 +576,84 @@
         <h2>@sepideh_hamburg</h2>
       </div>
       <div class="ig-grid">
-        <a class="ig-item reveal" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Beitrag auf Instagram ansehen">
-          <img src="images/ig-1.jpg" alt="Kabab mit Safranreis und Beilagen" loading="lazy">
+        <a class="ig-item reveal" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Sepideh auf Instagram ansehen">
+          <img src="images/shot-01.jpg" alt="Gericht aus dem Restaurant Sepideh" loading="lazy">
           <span class="ig-overlay" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
         </a>
-        <a class="ig-item reveal" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Beitrag auf Instagram ansehen">
-          <img src="images/ig-2.jpg" alt="Suppe mit frischen Kräutern und Brotkorb" loading="lazy">
+        <a class="ig-item reveal" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Sepideh auf Instagram ansehen">
+          <img src="images/shot-02.jpg" alt="Gericht aus dem Restaurant Sepideh" loading="lazy">
           <span class="ig-overlay" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
         </a>
-        <a class="ig-item reveal" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Beitrag auf Instagram ansehen">
-          <img src="images/ig-3.jpg" alt="Ankündigung der Wiedereröffnung des Restaurants" loading="lazy">
+        <a class="ig-item reveal" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Sepideh auf Instagram ansehen">
+          <img src="images/shot-03.jpg" alt="Gericht aus dem Restaurant Sepideh" loading="lazy">
           <span class="ig-overlay" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
         </a>
-        <a class="ig-item reveal" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Beitrag auf Instagram ansehen">
-          <img src="images/ig-4.jpg" alt="Eid Mubarak Grußkarte des Restaurants" loading="lazy">
+        <a class="ig-item reveal" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Sepideh auf Instagram ansehen">
+          <img src="images/shot-04.jpg" alt="Gericht aus dem Restaurant Sepideh" loading="lazy">
+          <span class="ig-overlay" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+        <a class="ig-item ig-hidden" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Sepideh auf Instagram ansehen">
+          <img src="images/shot-05.jpg" alt="Gericht aus dem Restaurant Sepideh" loading="lazy">
+          <span class="ig-overlay" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+        <a class="ig-item ig-hidden" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Sepideh auf Instagram ansehen">
+          <img src="images/shot-06.jpg" alt="Gericht aus dem Restaurant Sepideh" loading="lazy">
+          <span class="ig-overlay" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+        <a class="ig-item ig-hidden" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Sepideh auf Instagram ansehen">
+          <img src="images/shot-07.jpg" alt="Gericht aus dem Restaurant Sepideh" loading="lazy">
+          <span class="ig-overlay" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+        <a class="ig-item ig-hidden" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Sepideh auf Instagram ansehen">
+          <img src="images/shot-08.jpg" alt="Gericht aus dem Restaurant Sepideh" loading="lazy">
+          <span class="ig-overlay" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+        <a class="ig-item ig-hidden" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Sepideh auf Instagram ansehen">
+          <img src="images/shot-09.jpg" alt="Gericht aus dem Restaurant Sepideh" loading="lazy">
+          <span class="ig-overlay" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+        <a class="ig-item ig-hidden" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Sepideh auf Instagram ansehen">
+          <img src="images/shot-10.jpg" alt="Gericht aus dem Restaurant Sepideh" loading="lazy">
+          <span class="ig-overlay" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+        <a class="ig-item ig-hidden" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Sepideh auf Instagram ansehen">
+          <img src="images/shot-11.jpg" alt="Gericht aus dem Restaurant Sepideh" loading="lazy">
+          <span class="ig-overlay" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+        <a class="ig-item ig-hidden" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Sepideh auf Instagram ansehen">
+          <img src="images/shot-12.jpg" alt="Gericht aus dem Restaurant Sepideh" loading="lazy">
+          <span class="ig-overlay" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+        <a class="ig-item ig-hidden" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Sepideh auf Instagram ansehen">
+          <img src="images/shot-13.jpg" alt="Gericht aus dem Restaurant Sepideh" loading="lazy">
+          <span class="ig-overlay" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+        <a class="ig-item ig-hidden" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Sepideh auf Instagram ansehen">
+          <img src="images/shot-14.jpg" alt="Gericht aus dem Restaurant Sepideh" loading="lazy">
+          <span class="ig-overlay" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+        <a class="ig-item ig-hidden" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Sepideh auf Instagram ansehen">
+          <img src="images/shot-15.jpg" alt="Gericht aus dem Restaurant Sepideh" loading="lazy">
+          <span class="ig-overlay" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+        <a class="ig-item ig-hidden" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Sepideh auf Instagram ansehen">
+          <img src="images/shot-16.jpg" alt="Gericht aus dem Restaurant Sepideh" loading="lazy">
+          <span class="ig-overlay" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+        <a class="ig-item ig-hidden" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Sepideh auf Instagram ansehen">
+          <img src="images/shot-17.jpg" alt="Gericht aus dem Restaurant Sepideh" loading="lazy">
+          <span class="ig-overlay" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+        <a class="ig-item ig-hidden" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener" aria-label="Sepideh auf Instagram ansehen">
+          <img src="images/shot-18.jpg" alt="Gericht aus dem Restaurant Sepideh" loading="lazy">
           <span class="ig-overlay" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
         </a>
       </div>
       <div class="ig-actions reveal">
+        <button class="menu-more" id="igMore" type="button" style="margin: 0;">Mehr laden</button>
         <a class="btn-solid" href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
-          Mehr auf Instagram anzeigen
+          Auf Instagram öffnen
         </a>
       </div>
     </div>
@@ -645,7 +704,7 @@
       <a href="#">Impressum</a>
       <a href="#">Datenschutz</a>
     </div>
-    <p style="width:100%; font-size:12px; opacity:.7;">Fotos: <a href="https://unsplash.com/" target="_blank" rel="noopener">Unsplash</a></p>
+    <p style="width:100%; font-size:12px; opacity:.7;">Fotos: Restaurant Sepideh · <a href="https://www.instagram.com/sepideh_hamburg/" target="_blank" rel="noopener">@sepideh_hamburg</a></p>
   </div>
 </footer>
 
@@ -689,6 +748,14 @@
     });
     cat.appendChild(btn);
   });
+
+  const igMore = document.getElementById('igMore');
+  if (igMore) {
+    igMore.addEventListener('click', () => {
+      document.querySelectorAll('.ig-item.ig-hidden').forEach(el => el.classList.remove('ig-hidden'));
+      igMore.remove();
+    });
+  }
 
   const prefersReduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!prefersReduced && 'IntersectionObserver' in window) {
